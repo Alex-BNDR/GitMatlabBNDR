@@ -7,13 +7,12 @@ Posrow=Ly/(Ny+1); Poscol=Lx/(Nx+1);
 N=Nx*Ny; % число частинок системи
 i=1;
 for Rows=1:Ny
- for Col=1:Nx
- 
- % задання початкових швидкостей частинок
- Vx(i)=Vmax*(2*rand(1)-1); Vy(i)=Vmax*(2*rand(1)-1);
- x(i)=Poscol*Col/2+Vx(i)*T; y(i)=Posrow*Rows+Vy(i)*T; % задання початкових координат частинок
- i=i+1;
- end
+    for Col=1:Nx
+        % задання початкових швидкостей частинок
+        Vx(i)=Vmax*(2*rand(1)-1); Vy(i)=Vmax*(2*rand(1)-1);
+        x(i)=Poscol*Col/2+Vx(i)*T; y(i)=Posrow*Rows+Vy(i)*T; % задання початкових координат частинок
+    i=i+1;
+    end
 end
 Vxfull=mean(Vx); Vyfull=mean(Vy); % проекції швидкості центру мас системи
 i=1:N;

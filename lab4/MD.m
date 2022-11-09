@@ -7,7 +7,7 @@ function z=MD(Lx,Ly,N,Ni,dt,RV) % Функція, що повертає скла
 % А - масив, який повертає функція init
 Accold=Acc(RV,Lx,Ly,N); A2=cat(2,RV,Accold); A3=cat(3,A2); k=0;
 while k<Ni
- A2=Verlet(A2,Lx,Ly,N,dt); A3=cat(3,A3,A2); k=k+1;
+    A2=Verlet(A2,Lx,Ly,N,dt); A3=cat(3,A3,A2); k=k+1;
 end
 z=A3;
 end

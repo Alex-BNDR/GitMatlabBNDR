@@ -41,41 +41,41 @@ md=MD(Lx,Ly,N,Ni,dt,RV)
 
 
 
-% RV1=init(Lx,Ly,Nx,Ny,Vmax,T1) 
-% accfunc1=Acc(RV1,Lx,Ly,N)
-% md1=MD(Lx,Ly,N,Ni,dt,RV1)
-% 
-% RV2=init(Lx,Ly,Nx,Ny,Vmax,T1) 
-% accfunc2=Acc(RV2,Lx,Ly,N)
-% md2=MD(Lx,Ly,N,Ni,dt,RV2)
-% 
-% RV3=init(Lx,Ly,Nx,Ny,Vmax,T1) 
-% accfunc3=Acc(RV3,Lx,Ly,N)
-% md3=MD(Lx,Ly,N,Ni,dt,RV3)
-% 
-% 
-% 
-% 
-% % розрахунок енергій
-% Ep=0;
-% for i=1:N-1
-%     for j=i+1:N
-%         Dx=x(i)-x(j);
-%         if abs(Dx)>Lx/2
-%             Dx=Dx-sign(Dx)*Lx;
-%         end
-%         Dy=y(i)-y(j);
-%         if abs(Dy)>Ly/2
-%             Dy=Dy-sign(Dy)*Ly;
-%         end
-%         r=(Dx^2+Dy^2).^0.5; Ep=Ep+4*(1/r.^12-1/r.^6);
-%     end
-% end
-% Ek=0;
-% for i=1:N
-%     Ek=Ek+0.5*(Vx(i)^2+Vy(i)^2);
-% end
-% Ep
-% Ek
-% Esum = Ep+Ek 
-% 
+RV1=init(Lx,Ly,Nx,Ny,Vmax,T1) 
+accfunc1=Acc(RV1,Lx,Ly,N)
+md1=MD(Lx,Ly,N,Ni,dt,RV1)
+
+RV2=init(Lx,Ly,Nx,Ny,Vmax,T1) 
+accfunc2=Acc(RV2,Lx,Ly,N)
+md2=MD(Lx,Ly,N,Ni,dt,RV2)
+
+RV3=init(Lx,Ly,Nx,Ny,Vmax,T1) 
+accfunc3=Acc(RV3,Lx,Ly,N)
+md3=MD(Lx,Ly,N,Ni,dt,RV3)
+
+
+
+
+% розрахунок енергій
+Ep=0;
+for i=1:N-1
+    for j=i+1:N
+        Dx=x(i)-x(j);
+        if abs(Dx)>Lx/2
+            Dx=Dx-sign(Dx)*Lx;
+        end
+        Dy=y(i)-y(j);
+        if abs(Dy)>Ly/2
+            Dy=Dy-sign(Dy)*Ly;
+        end
+        r=(Dx^2+Dy^2).^0.5; Ep=Ep+4*(1/r.^12-1/r.^6);
+    end
+end
+Ek=0;
+for i=1:N
+    Ek=Ek+0.5*(Vx(i)^2+Vy(i)^2);
+end
+Ep
+Ek
+Esum = Ep+Ek 
+

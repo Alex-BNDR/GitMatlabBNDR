@@ -1,4 +1,4 @@
-function z=init(Lx,Ly,Nx,Ny,Vmax,T) 
+function z=init(Lx,Ly,Nx,Ny,Vmax) 
 % Функція, яка повертає початкову конфігурацію системи
 % Lx - ширина МД-комірки, Ly - висота МД-комірки
 % Nx - ширина початкової комірки, Ny - висота початкової комірки
@@ -8,10 +8,10 @@ N=Nx*Ny; % число частинок системи
 i=1;
 for Rows=1:Ny
     for Col=1:Nx
+        x(i)=Poscol*Col/2; y(i)=Posrow*Rows; % задання початкових координат частинок
         % задання початкових швидкостей частинок
         Vx(i)=Vmax*(2*rand(1)-1); Vy(i)=Vmax*(2*rand(1)-1);
-        x(i)=Poscol*Col/2+Vx(i)*T; y(i)=Posrow*Rows+Vy(i)*T; % задання початкових координат частинок
-    i=i+1;
+        i=i+1;
     end
 end
 Vxfull=mean(Vx); Vyfull=mean(Vy); % проекції швидкості центру мас системи

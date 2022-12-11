@@ -10,7 +10,7 @@ dl=1.25;
 % в точках -dl та +dl
 x=linspace(-dl,+dl,npix); y=linspace(-dl,+dl,npix); 
 % матриця C містить всі початкові точки даної області
-[X,Y]=meshgrid(x,y); Z=X+1i*Y; C=0.27334-0.00742*1i; % початкова точка
+[X,Y]=meshgrid(x,y); Z=X+1i*Y; C=-0.745429*1i; % початкова точка
 for l=1:iter Z=Z.^2+C; end
 figure(1); W = exp(-abs(Z)); imagesc(W); colormap(summer); axis ('equal','off')
 figure(2); W = exp(-abs(Z)); imagesc(W); colormap(autumn); axis ('equal','off')

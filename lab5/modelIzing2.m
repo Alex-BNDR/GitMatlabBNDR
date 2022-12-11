@@ -19,6 +19,6 @@ for i=1:length(TT)
     x(i)=(1/TT(i))*(mean(M2)-mean(M1).^2);
 
 end
-figure(1); plot(TT,c,'b'); grid; title('Залежність теплоємності від температури'); xlabel('\itT'); ylabel("\itc");
-figure(2); plot(TT,x,'b'); grid; title('Залежність магнітної сприйнятливості від температури'); xlabel('\itT'); ylabel("\itX");
+figure(); plot(TT,c,'b'); grid; title('Залежність теплоємності від температури'); xlabel('\itT'); ylabel("\itc");
+figure(); plot(TT,x,'b'); grid; title('Залежність магнітної сприйнятливості від температури'); xlabel('\itT'); ylabel("\itX");
 end

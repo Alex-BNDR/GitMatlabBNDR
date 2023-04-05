@@ -1,0 +1,38 @@
+Z=[1:1000;1:1000];
+for a=1:1000
+    for b=1:1000
+        Z(a,b)=0;
+    end
+end
+
+count=1:1000;
+for b=1:1000
+        count(b)=0;
+end
+
+
+x=1;
+y=1;
+
+% Z(строка, столбець) = Y(1)-X(1+1)
+% 
+% 
+% Z(2, 1, 
+% 
+% 
+% 
+
+
+while x<=1000
+    while y<=1000
+        Z(y,x)=Y(y)-X(y+1);
+        y=y+1;
+    end
+    x=x+1;
+end
+
+% while Z(x,y)>=1
+%     count(x)=count(x)+1;
+%     y=y+1;
+% end
+
